@@ -1,0 +1,64 @@
+<html>
+<head>
+<script>
+		function reverse()
+		{
+			var n,rev=0,rem;
+			n=parseInt(prompt("enter a number to reverse"));
+			while(n!=0)
+			{
+			  rem=n%10;
+			  rev=rev*10+rem;
+			  n=parseInt(n/10);
+			}
+			alert(rev);
+ }
+		function prime(){
+		var i,flag=0,number;
+		number=parseInt(document.getElementById("n").value);
+		for(i=2;i<=number/2;i++)
+		{
+			if(number%i==0)
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==0)
+		{
+			alert(number+" is Prime");
+		}
+		else
+		{
+			alert(number+" is Not Prime");
+		}
+	}
+		function fact()
+		{
+			var i,num,f;
+			f=1;
+			num=parseInt(document.getElementById("number").value);
+			for(i=1;i<=num;i++)
+			{
+				f=f*i;
+			}
+			document.getElementById("result").value=f;
+		}
+</script>
+</head>
+<body>
+<button onclick="reverse()">REVERSE</button><br><br>
+enter the number:<input id="n">
+<button onclick="prime()">prime</button><br><br>
+
+Enter a num:<input id="number">
+<button onclick="fact()">factorial</button>
+Factorial:<input id="result">
+
+</body>
+</html>		
+        
+           
+        
+
+        
